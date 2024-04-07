@@ -13,7 +13,7 @@ def check(text):
 text = str(input())
 print(check(text))
 
-
+"""
 #ex2
 import re
 
@@ -40,6 +40,7 @@ sequences = findseq(text)
 print(sequences)
 
 
+
 #ex4
 import re
 
@@ -56,7 +57,7 @@ print(sequences)
 import re
 
 def check_A_to_B(text):
-    pattern = 'a.*b$'  
+    pattern = '^a.*b$'  
     if re.match(pattern, text):
         return True
     else:
@@ -93,7 +94,7 @@ def spl(text):
 
 text = str(input())
 result = spl(text)
-print(result)
+print(result)   
 
 #ex9
 import re
@@ -117,3 +118,4 @@ camel = str(input())
 snake = C_to_S(camel)
 print(snake)
 
+"""

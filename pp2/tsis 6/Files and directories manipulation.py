@@ -1,36 +1,36 @@
 #TSIS 6 Files and Directories
 
 #ex1
-import os  #Модуль os предоставляет функции для работы с операционной системой, включая операции с файлами и директориями.
+import os  
 
-def list_directories(path):
+def directory(path):
     directories = [d for d in os.listdir(path) if os.path.isdir(os.path.join(path, d))]
     return directories
 
-def list_files(path):
+def file(path):
     files = [f for f in os.listdir(path) if os.path.isfile(os.path.join(path, f))]
     return files
 
-def list_all(path):
+def all(path):
     all_entries = os.listdir(path)
     return all_entries
 
-path = '/path/to/your/directory'
+path = '>>>directory'
 
-directories = list_directories(path)
+directories = directory(path)
 print("Directories:")
-for directory in directories:
-    print(directory)
+for i in directories:
+    print(i)
 
-files = list_files(path)
+files = file(path)
 print("\nFiles:")
-for file in files:
+for j in files:
     print(file)
 
-all_entries = list_all(path)
-print("\nAll Directories and Files:")
-for entry in all_entries:
-    print(entry)
+all_entries = all(path)
+print("\nAll:")
+for k in all_entries:
+    print(k)
 
 
 #ex2
@@ -45,7 +45,7 @@ def check_access(path):
     }
     return access_info
 
-path = '/path/to/your/directory_or_file'
+path = 'aidoos/c'
 
 access_info = check_access(path)
 
@@ -67,7 +67,7 @@ def path_info(path):
     else:
         return (False, None, None)
 
-path = '/path/to/your/file_or_directory'
+path = '>>>file_or_directory'
 
 exists, filename, directory = path_info(path)
 
@@ -85,7 +85,7 @@ def count_lines(file_path):
         line_count = sum(1 for line in file)
     return line_count
 
-file_path = 'path/to/your/text_file.txt'
+file_path = '>>>text_file.txt'
 
 line_count = count_lines(file_path)
 
@@ -98,13 +98,13 @@ def write_list_to_file(file_path, lst):
         for item in lst:
             file.write(str(item) + '\n')
 
-file_path = 'path/to/your/output_file.txt'
+file_path = '>>>output_file.txt'
 
 my_list = ['apple', 'banana', 'cherry', 'date']
 
 write_list_to_file(file_path, my_list)
 
-print(f"List has been written to '{file_path}'")
+print(f">>>'{file_path}'")
 
 
 #ex6
@@ -122,12 +122,12 @@ def copy_file(source_file, destination_file):
         for line in source:
             destination.write(line)
 
-source_file_path = 'path/to/your/source_file.txt'
-destination_file_path = 'path/to/your/destination_file.txt'
+source_file_path = '>>>source_file.txt'
+destination_file_path = '>>>destination_file.txt'
 
 copy_file(source_file_path, destination_file_path)
 
-print(f"Contents of '{source_file_path}' have been copied to '{destination_file_path}'")
+print(f" '{source_file_path}' copy to '{destination_file_path}'")
 
 
 #ex8
@@ -139,11 +139,11 @@ def check_access(path):
 def delete_file(path):
     if check_access(path):
         os.remove(path)
-        print(f"File '{path}' deleted successfully.")
+        print(f"File '{path}' udalen.")
     else:
-        print(f"File '{path}' does not exist or cannot be accessed.")
+        print(f"File '{path}' netu.")
 
-file_path = 'path/to/your/file_to_delete.txt'
+file_path = '>>>file_to_delete.txt'
 
 delete_file(file_path)
 

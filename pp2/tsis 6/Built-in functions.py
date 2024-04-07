@@ -30,8 +30,8 @@ def count(text):
 
 text = str(input())
 upper, lower = count(text)
-print(f"Number of uppercase letters: {upper}")
-print(f"Number of lowercase letters: {lower}")
+print(f"Uppercase letters: {upper}")
+print(f"Lowercase letters: {lower}")
 
 
 #ex3
@@ -45,7 +45,7 @@ else:
 
 
 #ex4
-import time
+import time 
 import math
 
 def calculator(number, milliseconds):
@@ -67,6 +67,6 @@ cortej = tuple(map(bool, input().split()))
 result = all(cortej)
 
 if result:
-    print("All elements of the tuple are True.")
+    print("All elements True.")
 else:
-    print("Not all elements of the tuple are True.")
+    print("Not all elements  True.")

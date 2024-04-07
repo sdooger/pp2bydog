@@ -4,7 +4,7 @@
 from datetime import date,timedelta
 
 today = date.today()
-after = cur_date-timedelta(days=5)
+after = today-timedelta(days=5)
 print(after)
 
 #ex2
